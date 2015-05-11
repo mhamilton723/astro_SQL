@@ -1,0 +1,32 @@
+SELECT
+my.sdss_dr8objid  sdss_dr8objid,
+x.distanceMins    distanceMins,
+u.sourceID        ukidss_objid,
+u.ebv             eBV,
+ 
+u.yAperMag4       ukidss_y_mag,
+u.yAperMag4Err    ukidss_y_err,
+ 
+u.j_1AperMag4     ukidss_j_mag,
+u.j_1AperMag4Err  ukidss_j_err,
+ 
+u.hAperMag4       ukidss_h_mag,
+u.hAperMag4Err    ukidss_h_err,
+ 
+u.kAperMag4       ukidss_k_mag,   
+u.kAperMag4Err    ukidss_k_err
+ 
+FROM  lasSourceXDR8PhotoObj x,  lasSource u,  #userTable my
+ 
+WHERE
+x.slaveObjID=my.sdss_dr8objID
+and x.masterObjID=u.sourceID
+and x.sdssPrimary=1
+and x.distanceMins < .01
+and u.pNoise < .05
+ 
+and x.distanceMins IN (
+SELECT MIN(distanceMins)
+FROM lasSourceXDR8PhotoObj
+WHERE masterObjID=x.masterObjID AND sdssPrimary=1)
+order by my.sdss_dr8objid,u.sourceid

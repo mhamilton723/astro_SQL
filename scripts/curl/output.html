@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+    <title>WSA Database - SQL Query Results</title> 
+
+    <script type="text/javascript" src="http://surveys.roe.ac.uk/wsa/configurestyles.js"> 
+    </script> 
+  </head> 
+
+  <body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#000080" alink="#FF0000" onLoad="swap(0);" > 
+
+<img name="imgMain" src="http://surveys.roe.ac.uk/wsa/static.gif" border="1"><p>
+    <h1>WSA Database - SQL Query Results</h1> 
+
+    <p> 
+      Data file generating queries can take a bit longer to execute 
+      as they write to a file ALL rows returned by the query. 
+    </p> 
+
+    <p> 
+      A web link to your generated output file will appear at the 
+      bottom of this page. 
+    </p> 
+
+    <p>
+<b>Connecting to UKIDSSDR9PLUS database</b><br>
+      <b>QUERY STARTED:</b> Wed Jul 09 20:06:14 BST 2014&nbsp;&nbsp;&nbsp;[1 active, 4224 total] 
+    </p> 
+
+    <p> 
+      Please keep this browser window open and wait for your results or further information to	 appear below... 
+    </p> 
+
+<p>Parsed upload file<p>12512 row(s) read from foo.csv CSV<p>
+timeout: 10800<p>Connected to database
+<p>Parsing upload file...<p>#userTable table created.
+<p>#userTable columns: sdss_dr7objid,sdss_dr8objid,RA,DEC,z,z_phot,petroRad_u,petroRad_g,petroRad_r,petroRad_i,petroRad_z,petroR90_u,petroR90_g,petroR90_r,petroR90_i,petroR90_z,probPSF,sdss_u_mag,sdss_u_err,sdss_g_mag,sdss_g_err,sdss_r_mag,sdss_r_err,sdss_i_mag,sdss_i_err,sdss_z_mag,sdss_z_err
+<p>Submitted query: SELECT my.sdss_dr8objid  sdss_dr8objid, x.distanceMins    distanceMins, u.sourceID        ukidss_objid, u.ebv             eBV,   u.yAperMag4       ukidss_y_mag, u.yAperMag4Err    ukidss_y_err,   u.j_1AperMag4     ukidss_j_mag, u.j_1AperMag4Err  ukidss_j_err,   u.hAperMag4       ukidss_h_mag, u.hAperMag4Err    ukidss_h_err,   u.kAperMag4       ukidss_k_mag,    u.kAperMag4Err    ukidss_k_err   FROM  lasSourceXDR8PhotoObj x,  lasSource u,  #userTable my   WHERE x.slaveObjID=my.sdss_dr8objID and x.masterObjID=u.sourceID and x.sdssPrimary=1 and x.distanceMins &lt; .01 and u.pNoise &lt; .05   and x.distanceMins IN ( SELECT MIN(distanceMins) FROM lasSourceXDR8PhotoObj WHERE masterObjID=x.masterObjID AND sdssPrimary=1) order by my.sdss_dr8objid,u.sourceid<p>
+    <p>
+<script language="JavaScript" type="text/javascript"> <!-- 
+swap(1);
+--> </script>
+&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->&#8226;<!--                                                                                                    -->      OK
+    </p> 
+
+    <table border="1" cellspacing="0" cellpadding="3" bgcolor="#FFDDDD"> 
+      <tr bgcolor="#FFFFCC"> 
+        <th>&nbsp;</th> 
+        <th nowrap>sdss_dr8objid</th> 
+        <th nowrap>distanceMins</th> 
+        <th nowrap>ukidss_objid</th> 
+        <th nowrap>eBV</th> 
+        <th nowrap>ukidss_y_mag</th> 
+        <th nowrap>ukidss_y_err</th> 
+        <th nowrap>ukidss_j_mag</th> 
+        <th nowrap>ukidss_j_err</th> 
+        <th nowrap>ukidss_h_mag</th> 
+        <th nowrap>ukidss_h_err</th> 
+        <th nowrap>ukidss_k_mag</th> 
+        <th nowrap>ukidss_k_err</th> 
+      </tr> 
+      <tr bgcolor="#FFDDDD" class="RowOdd"> 
+        <td nowrap class="RowHeader" bgcolor="#FFFFCC"><b>1</b></td> 
+<td align="right" nowrap>1237648702968103032</td> 
+<td align="right" nowrap>+0.003471</td> 
+<td align="right" nowrap>433870525047</td> 
+<td align="right" nowrap>+0.026257</td> 
+<td align="right" nowrap>+16.294455</td> 
+<td align="right" nowrap>+0.009148</td> 
+<td align="right" nowrap>+15.742267</td> 
+<td align="right" nowrap>+0.009191</td> 
+<td align="right" nowrap>+15.011984</td> 
+<td align="right" nowrap>+0.009870</td> 
+<td align="right" nowrap>+14.471326</td> 
+<td align="right" nowrap>+0.009499</td> 
+</tr> 
+    </table>
+
+    <p> 
+      (Query returned 5210 result rows, 
+      only the first row is shown in the displayed table.) 
+    </p> 
+
+<p> 
+<table cellspacing="0" cellpadding="3"><tr><td align="right"><a href="http://surveys.roe.ac.uk/wsa/tmp/tmp_sql/results9_20_6_19_4325.csv.gz"><img src="http://surveys.roe.ac.uk/wsa/tmp/images/icons/save.gif" border="0"></a></td><td><a class="dl" id="dl_id" href="http://surveys.roe.ac.uk/wsa/tmp/tmp_sql/results9_20_6_19_4325.csv.gz">Download Results File </a>, your results in a gzipped CSV ASCII file 
+(Contains <b>5210 rows</b>, 238.2 KB) 
+</td> 
+</table>
+    <p> 
+      <b>QUERY FINISHED:</b> Wed Jul 09 20:06:43 BST 2014 
+    </p> 
+
+<script language="JavaScript" type="text/javascript"> <!-- 
+swap(0);
+--> </script>
+    <p> 
+      Click your browsers 'BACK' button to try another query...
+    </p> 
+
+
+    <hr size="1" noshade="noshade" /> 
+
+    <small class="FooterText"> 
+      &nbsp;Page created: 9 July 2014&nbsp;&nbsp;&#8226;&nbsp;&nbsp; 
+
+    <script type="text/javascript" src="http://surveys.roe.ac.uk/wsa/browserversion.js"> 
+    </script> 
+      <noscript> 
+        [!!]&nbsp;&nbsp;Style-sheets disabled (cannot detect browser support) 
+      </noscript> 
+    </small> 
+  </body> 
+</html> 
+
