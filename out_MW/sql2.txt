@@ -1,0 +1,32 @@
+SELECT distinct
+my.survey, my.xray_objid,
+my.sdss_dr8objid  sdss_dr8objid,
+u.sourceID        ukidss_objid,
+u.ebv             eBV,
+u.pNoise,
+ 
+u.yAperMag4       ukidss_y_apermag,
+u.yAperMag4Err    ukidss_y_apererr,
+u.j_1AperMag4     ukidss_j_apermag,
+u.j_1AperMag4Err  ukidss_j_apererr,
+u.hAperMag4       ukidss_h_apermag,
+u.hAperMag4Err    ukidss_h_apererr,
+u.kAperMag4       ukidss_k_apermag,   
+u.kAperMag4Err    ukidss_k_apererr,
+
+u.yPetroMag       ukidss_y_petromag,
+u.yPetroMagErr    ukidss_y_petroerr,
+u.j_1PetroMag     ukidss_j_petromag,
+u.j_1PetroMagErr  ukidss_j_petroerr,
+u.hPetroMag       ukidss_h_petromag,
+u.hPetroMagErr    ukidss_h_petroerr,
+u.kPetroMag       ukidss_k_petromag,   
+u.kPetroMagErr    ukidss_k_petroerr
+ 
+FROM  lasSource u,  #userTable my
+ 
+WHERE
+u.sourceID=my.ukidss_objid
+
+ 
+
